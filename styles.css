@@ -1,0 +1,594 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #afb4ad; /* Fondo verdegrisaseo */
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #afb4ad;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #1a3d66; /* Azul oscuro */
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #1a3d66; /* Azul oscuro */
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Estilos para el logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.logo-image {
+  width: 40px; /* Ajusta el tamaño según necesites */
+  height: auto;
+  border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  background: url('imagenes/golfgt.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 80px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero h1 {
+  
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero h2 {
+  text-align: center;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #1a3d66; /* Azul oscuro */
+}
+
+.hero-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  height: auto;
+  opacity: 0.9;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.about-text1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Productos Destacados */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 50px 0 30px;
+  color: #333;
+}
+
+.products-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.product-card {
+  background-color: #f8f8f8; /* Crema claro */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.product-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a3d66; /* Azul oscuro */
+  margin-bottom: 15px;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 5px;
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 10px;
+  background-color: #1a3d66; /* Azul oscuro */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #0d233a; /* Azul más oscuro */
+}
+
+/* Sobre Nosotros */
+.about-section {
+  background-color: #afb4ad; /* Crema claro */
+  padding: 80px 30px;
+  margin: 50px 0;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-image {
+  flex: 1;
+  height: 400px;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-text {
+  
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trial-banner {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.subscribe-btn {
+  background-color: #1a3d66; /* Azul oscuro */
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+      flex-direction: column;
+      gap: 15px;
+  }
+  
+  .hero h1 {
+      font-size: 2rem;
+  }
+  
+  .hero p {
+      font-size: 1rem;
+  }
+  
+  .about-content {
+      flex-direction: column;
+  }
+  
+  .about-image {
+      height: 300px;
+  }
+  
+  .products-container {
+      gap: 20px;
+  }
+  
+  .product-card {
+      width: 100%;
+      max-width: 300px;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animaciones de scroll */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación para las tarjetas de productos */
+.products-container.visible .product-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.products-container.visible .product-card:nth-child(1) { transition-delay: 0.1s; }
+.products-container.visible .product-card:nth-child(2) { transition-delay: 0.2s; }
+.products-container.visible .product-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* Animación para el contenido sobre nosotros */
+.about-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-section.visible .about-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+.logo-image:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Sección de Contacto */
+.contact-section {
+  background-color: #f8f8f8; /* Crema claro */
+  padding: 60px 20px;
+  margin: 50px 0;
+}
+
+.contact-section .container {
+  max-width: 800px;
+}
+
+.contact-section .section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Estilos para botones de registro e inicio de sesión */
+.nav-item[href="#"]:not(.cart-icon) {
+  background-color: #1a3d66; /* Azul oscuro */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item[href="#"]:not(.cart-icon):hover {
+  background-color: #0d233a; /* Azul más oscuro */
+  color: white;
+}
+
+.nav-item[href="#acerca-de"]:not(.cart-icon) {
+  background-color: #1a3d66; /* Azul oscuro */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item[href="#acerca-de"]:not(.cart-icon):hover {
+  background-color: #0d233a; /* Azul más oscuro */
+  color: white;
+}
+
+.nav-item[href="login.html"]:not(.cart-icon) {
+  background-color: #1a3d66; /* Azul oscuro */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.nav-item[href="login.html"]:not(.cart-icon):hover {
+  background-color: #0d233a; /* Azul más oscuro */
+  color: white;
+}
+
+
+/* Estilos para la página de login */
+.login-body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #afb4ad;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.39);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #1a3d66;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a3d66;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0d233a;
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #1a3d66;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
