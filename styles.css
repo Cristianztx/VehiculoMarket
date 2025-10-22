@@ -891,3 +891,85 @@ html {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* Estilos para la página de recuperar contraseña */
+.forgot-password-icon {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.forgot-password-icon svg {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: popIn 0.5s ease-out 0.2s forwards;
+}
+
+.forgot-password-text {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #666;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.forgot-password-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.register-link {
+  text-align: center;
+  color: #1a3d66;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* Asegurar que los estilos del formulario sean consistentes */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Mejorar la apariencia del input de email */
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-group input[type="email"]:focus {
+  outline: none;
+  border-color: #1a3d66;
+  box-shadow: 0 0 0 3px rgba(26, 61, 102, 0.1);
+}
+
+/* Animación específica para el icono */
+@keyframes popIn {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  70% {
+      transform: scale(1.1);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Asegurar que las animaciones se apliquen correctamente */
+.login-body.loaded .forgot-password-icon svg {
+  animation: popIn 0.5s ease-out 0.2s forwards;
+}
